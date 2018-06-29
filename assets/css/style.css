@@ -1,7 +1,12 @@
 body {
     background-color: dimgray;
+    font-family: 'Coda', cursive;
 }
 
 header {
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    font-family: 'Arvo', serif;
 }
+
+/* font-family: 'Arvo', serif;
+font-family: 'Coda', cursive; */
