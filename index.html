@@ -10,6 +10,7 @@
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <script src="assets/javascript/logic.js"></script>
@@ -18,7 +19,7 @@
 <body>
 
     <div class="container">
-        <header class="row">
+        <header class="row mt-3">
             <div class="col-md-12 text-center">
                 <h1>
                     Time 4 Trainz
@@ -28,7 +29,7 @@
                 </h2>
             </div>
         </header>
-        <div class="card">
+        <div class="card schedule mt-3">
             <div class="card-header">
                 <h3>Current Train Schedule</h3>
             </div>
@@ -44,31 +45,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">what happens if this is a really long name</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                            <td>@mdo</td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
         </div>
-        <div class="card">
+        <div class="card add mt-3 mb-3">
             <div class="card-header">
                 <h3>Add Train</h3>
             </div>
@@ -81,7 +63,7 @@
                     </div>
                     <div class="form-group">
                         <label for="destination">Destination</label>
-                        <input type="text" class="form-control" id="destination" aria-describedby="destination" placeholder="Sesame Street">
+                        <input type="text" class="form-control" id="destination" aria-describedby="destination" placeholder="Sodor">
                         <small id="destinationHelp" class="form-text text-muted">We'll never share your train's destination with anyone else.</small>
                     </div>
                     <div class="form-group">
@@ -91,10 +73,10 @@
                     </div>
                     <div class="form-group">
                         <label for="frequency">Frequency (min)</label>
-                        <input type="frequency" class="form-control" id="frequency" aria-describedby="frequency" placeholder="42">
+                        <input type="frequency" class="form-control" id="frequency" aria-describedby="frequency" placeholder="70">
                         <small id="frequencyHelp" class="form-text text-muted">We'll never share the frequency with which your train arrives with anyone else.</small>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                 </form>
             </div>
         </div>
