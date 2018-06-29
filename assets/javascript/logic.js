@@ -88,4 +88,16 @@ $(document).ready(function () {
             frequency: frequency
         });
     });
+
+    let audio = new Audio("assets/audio/atmosphere.mp3");
+
+    //when user turns atmosphere on
+    $("#on").click(function () {
+        audio.play();
+    });
+
+    //when boring, mirthless user turns atmosphere off
+    $("#off").click(function () {
+        audio.pause();
+    });
 });
